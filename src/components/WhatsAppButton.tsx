@@ -1,5 +1,3 @@
-import React from "react";
-
 export const WhatsAppButton = () => {
   const phoneNumber = "+5564999564635";
   const message = "Olá! Estou interessado em um software";

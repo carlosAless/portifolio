@@ -8,7 +8,6 @@ type Contato = {
   valor: string;
   href: string;
   Icone: IconType;
-  cor: string;
   externo?: boolean;
 };
 
@@ -18,21 +17,18 @@ const contatos: Contato[] = [
     valor: "carloaless1512@gmail.com",
     href: "mailto:carloaless1512@gmail.com",
     Icone: HiOutlineMail,
-    cor: "#EA4335",
   },
   {
     nome: "Telefone",
     valor: "(64) 99956-4635",
     href: "tel:+5564999564635",
     Icone: FaPhone,
-    cor: "#34D399",
   },
   {
     nome: "GitHub",
     valor: "@carlosAless",
     href: "https://github.com/carlosAless",
     Icone: SiGithub,
-    cor: "#E2E8F0",
     externo: true,
   },
   {
@@ -40,7 +36,6 @@ const contatos: Contato[] = [
     valor: "Jataí — GO",
     href: "https://maps.google.com/?q=Jataí,GO",
     Icone: HiOutlineLocationMarker,
-    cor: "#38BDF8",
     externo: true,
   },
 ];
@@ -90,7 +85,7 @@ export const Contact = () => {
         </p>
 
         <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {contatos.map(({ nome, valor, href, Icone, cor, externo }) => (
+          {contatos.map(({ nome, valor, href, Icone }) => (
             <li key={nome}>
               <a
                 href={href}
